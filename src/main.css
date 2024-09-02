@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: EuclidCircularB, Roboto, sans-serif;
+    scroll-behavior: smooth;
+  }
+}
+ 
+
+h3 {
+	font-family: "Bangers";
+	font-weight: 400;
+	font-style: normal;
+	font-size: x-large;
+}
+
+h2 {
+	font-family: "Bangers";
+	font-weight: 400;
+	font-style: normal;
+	font-size: xx-large;
+}
+
+.number-text {
+	font-family: "Bangers";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 8em;
+}
+
+body {
+	margin:0;
+  }
+
+.fade-in-image { animation: fadeIn 5s; }
+.fade-in-image-fast { animation: fadeIn 1s; }
+
+.border-shadow {
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(
+      45deg,
+    #7f1d1d, /* Dark Red (Replacing Blue) */
+    #8b0000, /* Dark Red (Replacing Blue) */
+    #a52a2a, /* Reddish Brown (Replacing Blue) */
+    #b22222, /* Firebrick (Replacing Blue) */
+    #4a0404, /* Very Dark Red (Replacing Green) */
+    #6a0d0d, /* Dark Red (Replacing Green) */
+    #8b0000, /* Dark Red */
+    #a52a2a, /* Reddish Brown */
+    #b22222, /* Firebrick */
+    #cd5c5c, /* Indian Red (Transitional Red) */
+    #7f1d1d, /* Dark Red */
+    #8b0000, /* Dark Red */
+    #a52a2a, /* Reddish Brown */
+    #b22222, /* Firebrick */
+    #4a0404, /* Very Dark Red (Replacing Green) */
+    #6a0d0d, /* Dark Red (Replacing Green) */
+    #8b0000, /* Dark Red */
+    #a52a2a, /* Reddish Brown */
+    #b22222, /* Firebrick */
+    #cd5c5c  /* Indian Red (Transitional Red) */
+    );
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: 100%;
+    z-index: -11;
+    animation: animate 20s linear infinite;
+    border-radius: 1.5rem;
+  }
+
+  &:after {
+    filter: blur(10px);
+  }
+}
+  
+@keyframes animate {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 300% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  1% { opacity: 0.001; }
+  100% { opacity: 1; }
+}
+  
+  
+.blue-scrollbar {
+  scrollbar-color: #201F59 #e4e3e3;
+  scrollbar-width: thin;
+}

@@ -1,0 +1,180 @@
+.rozpis-navigation h1 {
+	font-size: 24px;
+}
+
+.rozpis-navigation a i {
+	font-size: 20px;
+}
+.rozpis-navigation a i.fas {
+	height: 50px;
+	width: 50px;
+	line-height: 1;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#rozpis-ledu {
+	font-size: 12px;
+}
+
+#rozpis-ledu td {
+	height: 60px;
+	position: relative;
+	border-top: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	background: #fff;
+}
+
+#rozpis-ledu td.day-name {
+	background: var(--day-name-bg);
+	color: #fff;
+	vertical-align: top;
+	padding: 5px 2px;
+	width: 57px;
+	max-width: 57px;
+}
+#rozpis-ledu td.place-name {
+	background: var(--place-name-bg);;
+	color: #fff;
+	vertical-align: top;
+	padding: 5px;
+	max-width: 50px;
+}
+#rozpis-ledu td.day-name span {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+#rozpis-ledu th.hour-range {
+	background: var(--hour-range-bg);;
+	color: #fff;
+	padding: 5px;
+	border-top: 1px solid #dddddd;
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	max-height: 30px;
+}
+
+#rozpis-ledu a.event {
+	position: absolute;
+	display: block;
+	display: -webkit-box;
+	top: 0;
+	left: 0;
+	height: 59px;
+	color: #fff;
+	z-index: 1;
+	padding: 4px;
+	overflow: hidden; 
+	-o-text-overflow: ellipsis;
+	   text-overflow: ellipsis;
+	line-height: 16px;
+	text-decoration: none !important;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+	border-right: 1px solid #fff;
+}
+
+/* Reduced UI */
+#rozpis-ledu.reduced-ui td {
+	height: 32px;
+}
+#rozpis-ledu.reduced-ui a.event {
+	line-height: .25;
+	padding: 2px 4px;
+}
+#rozpis-ledu.reduced-ui a.event > b:first-child {
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	line-height: 16px;
+}
+/* #rozpis-ledu.reduced-ui td.place-name span {
+	line-height: 16px;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+} */
+
+.reservation-block.disabled, .multi-reservation-block.disabled {
+	cursor: not-allowed;
+}
+
+.reservation-block[data-cancel-reservation]:hover::before {
+	content: 'ZRUŠIT';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	background-color: rgba(155, 0, 0, .7);
+	color: #fff;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+@media print {
+	@page {
+		size: A4 landscape;
+		margin: 1cm;
+	}
+	.noprint {
+		display: none;
+	}
+	body {
+		color: #000;
+		font-size: 10px;
+		padding: 0px;
+		margin: 0;
+		width: 1170px !important;
+	}
+	.wrapper {
+		all: unset;
+	}
+}
+
+body.print,
+body.print .wrapper {
+	width: 1170px !important;
+}
+
+@media only screen and (max-width: 1170px) {
+	.table-scrollable {
+		position: relative;
+		overflow: auto;
+	}
+	.table-scrollable > table {
+		min-width: 1170px;
+	}
+	.table-scrollable td.day-name {
+		position: -webkit-sticky !important;
+		position: sticky !important;
+		left: 0;
+		z-index: 1000;
+		border-left: 0 !important;
+	}
+	.table-scrollable td.day-name:after {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 1px;
+		background: #ddd;
+	}
+
+}
+
+@media screen and (min-width: 459px) {
+	.w-sm-auto {
+		width: auto !important;
+	}
+}

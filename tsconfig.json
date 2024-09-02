@@ -1,0 +1,16 @@
+{
+  "files": [],
+  "compilerOptions": {
+    "noPropertyAccessFromIndexSignature": false,
+    "jsx": "preserve",
+    "strictPropertyInitialization": false,
+    "downlevelIteration": true,
+    "strictNullChecks": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false
+  },
+  "references": [
+    { "path": "./tsconfig.app.json" },
+    { "path": "./tsconfig.node.json" }
+  ]
+}

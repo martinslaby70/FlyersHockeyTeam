@@ -1,0 +1,15 @@
+
+
+.slick-list{
+    overflow: visible;
+}
+
+
+.image-overlay {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: calc(100% + 2px);
+    height: calc(100% + 2px);
+   
+}
